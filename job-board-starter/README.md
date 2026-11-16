@@ -31,5 +31,8 @@ with tests, and add a short section to this README about what you built.
 - Wrote crud operations to loadSavedIds, writeSavedIds, getSavedJobs, saveJob and removeSavedJob from saved-jobs.json file  
 (under git commit - `saved jobs crud operations`)
 - Wrote rest api routes GET getSavedJobs, POST saveJob, DELETE removeSavedJob to perform the crud operations from UI.  
-(Under git commit - `GET POST DELETE rest routes`
+(Under git commit - `GET POST DELETE rest routes`) 
+- Built the "Saved Jobs" section on frontend using AI AGENT and save/remove button rendering by myself
+(Under git commit - saved jobs section and save/remove buttons`)
+
 
