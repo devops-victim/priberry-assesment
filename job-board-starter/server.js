@@ -50,15 +50,17 @@ export function createApp() {
         const { jobId } = await readJson(req);
 
         try {
-          const savedJob = await saveJob(body.jobId);
+          const savedJob = await saveJob(jobId);
           return sendJson(res, 201, { success: true, job: savedJob });
         } catch (err) {
           return sendJson(res, err.status ?? 400, { error: err.message });
         }
       }
 
-      if (req.method === "DELETE" && url.pathname === "/api/saved") {
-        const { jobId } = await readJson(req);
+      if (req.method === "DELETE" && (url.pathname === "/api/saved" || url.pathname.startsWith("/api/saved/"))) {
+        const jobId = url.pathname.startsWith("/api/saved/")
+          ? decodeURIComponent(url.pathname.slice("/api/saved/".length))
+          : (await readJson(req)).jobId;
         if (!jobId) {
           return sendJson(res, 400, { error: "jobId is required" });
         }

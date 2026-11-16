@@ -30,9 +30,9 @@ with tests, and add a short section to this README about what you built.
 
 - Wrote crud operations to loadSavedIds, writeSavedIds, getSavedJobs, saveJob and removeSavedJob from saved-jobs.json file  
 (under git commit - `saved jobs crud operations`)
-- Wrote rest api routes GET getSavedJobs, POST saveJob, DELETE removeSavedJob to perform the crud operations from UI.  
+- Wrote rest api routes GET /api/saved, POST /api/saved, DELETE /api/saved/:id to perform the crud operations from UI.  
 (Under git commit - `GET POST DELETE rest routes`) 
 - Built the "Saved Jobs" section on frontend using AI AGENT and save/remove button rendering by myself
 (Under git commit - `saved jobs section and save/remove buttons`)
-
-
+-Identified and Fixed minor incosistency with deletion operation on server.js DELETE route using AI AGENT.
+(Under git commit - `delete route fix`)
