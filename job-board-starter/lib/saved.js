@@ -17,24 +17,24 @@ export async function writeSavedIds(ids, path = savedJobsPath) {
     await writeFile(path, `${JSON.stringify(ids, null, 2)}\n`, "utf8");
 }
 
-export async function getSavedJobs(path = savedJobsPath, jobsPath) {
+export async function getSavedJobs(path = savedJobsPath) {
     const [ids, allJobs] = await Promise.all([
         loadSavedIds(path),
-        loadJobs(jobsPath)
+        loadJobs()
     ]);
     return ids.map((id) => findJob(allJobs, id)).filter(Boolean);
 }
 
-export async function saveJob(jobId, path = savedJobsPath, jobsPath) {
+export async function saveJob(jobId, path = savedJobsPath) {
     if (!jobId || typeof jobId !== "string") {
         throw new Error("Job ID must be a non-empty string");
     }
 
-    const allJobs = await loadJobs(jobsPath);
+    const allJobs = await loadJobs();
     const exists = findJob(allJobs, jobId);
 
     if (!exists) {
-        throw new Error(`Job with ID ${jobId} does not exist`);
+        const err = new Error(`Job with ID ${jobId} does not exist`);
         err.status = 404;
         throw err;
     }
