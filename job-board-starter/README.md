@@ -24,3 +24,12 @@ npm test       # runs the tests in test/
 
 See the work sample brief on insiderOne: add saved jobs (save, list, remove),
 with tests, and add a short section to this README about what you built.
+
+
+## Track of modifications:
+
+- Wrote crud operations to loadSavedIds, writeSavedIds, getSavedJobs, saveJob and removeSavedJob from saved-jobs.json file  
+(under git commit - `saved jobs crud operations`)
+- Wrote rest api routes GET getSavedJobs, POST saveJob, DELETE removeSavedJob to perform the crud operations from UI.  
+(Under git commit - `GET POST DELETE rest routes`
+
