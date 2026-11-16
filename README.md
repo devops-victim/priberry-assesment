@@ -19,7 +19,7 @@ npm test       # runs the tests in test/
 (Under git commit - `GET POST DELETE rest routes`) 
 - Built the "Saved Jobs" section on frontend using AI AGENT and save/remove button rendering by myself
 (Under git commit - `saved jobs section and save/remove buttons`)
--Identified and Fixed minor incosistency with deletion operation on server.js DELETE route using AI AGENT.
+- Identified and Fixed minor incosistency with deletion operation on server.js DELETE route using AI AGENT.
 (Under git commit - `delete route fix`)
 -Generated test cases from AI covering Jobs and Saved Jobs rendering, Empty saved jobs list, saving and listing a job, removing a saved job, persistence after server restart.
 All testcases passed.
