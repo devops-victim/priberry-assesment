@@ -11,21 +11,6 @@ You need Node 20 or newer. There are no packages to install.
 npm start      # then open http://localhost:3000
 npm test       # runs the tests in test/
 ```
-
-## What is here
-
-- `server.js`: the web server. `GET /api/jobs?q=` lists jobs, `GET /` serves the page.
-- `lib/jobs.js`: reading and searching the jobs. Pure functions.
-- `jobs.json`: the jobs.
-- `public/`: the page and its script.
-- `test/`: tests, using Node's built-in test runner.
-
-## Your task
-
-See the work sample brief on insiderOne: add saved jobs (save, list, remove),
-with tests, and add a short section to this README about what you built.
-
-
 ## Track of modifications:
 
 - Wrote crud operations to loadSavedIds, writeSavedIds, getSavedJobs, saveJob and removeSavedJob from saved-jobs.json file  
@@ -40,8 +25,9 @@ with tests, and add a short section to this README about what you built.
 All testcases passed.
 (Under git commit - `testcase generation and execution`)
 
-# One Important Decision
+## One Important Decision
 I persisted only JobId in `saved-jobs.json` rather than duplicating entire job object. 
 The file rather stores an array of unique JobIds and hydrating against `jobs.json`.
 This keeps the data normalized, and file writes small and fast.
 The difference is negligible at such small scale, but is substantially hire on large scale.
+
