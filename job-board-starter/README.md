@@ -33,6 +33,6 @@ with tests, and add a short section to this README about what you built.
 - Wrote rest api routes GET getSavedJobs, POST saveJob, DELETE removeSavedJob to perform the crud operations from UI.  
 (Under git commit - `GET POST DELETE rest routes`) 
 - Built the "Saved Jobs" section on frontend using AI AGENT and save/remove button rendering by myself
-(Under git commit - saved jobs section and save/remove buttons`)
+(Under git commit - `saved jobs section and save/remove buttons`)
 
 
