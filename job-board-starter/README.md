@@ -39,3 +39,9 @@ with tests, and add a short section to this README about what you built.
 -Generated test cases from AI covering Jobs and Saved Jobs rendering, Empty saved jobs list, saving and listing a job, removing a saved job, persistence after server restart.
 All testcases passed.
 (Under git commit - `testcase generation and execution`)
+
+# One Important Decision
+I persisted only JobId in `saved-jobs.json` rather than duplicating entire job object. 
+The file rather stores an array of unique JobIds and hydrating against `jobs.json`.
+This keeps the data normalized, and file writes small and fast.
+The difference is negligible at such small scale, but is substantially hire on large scale.
