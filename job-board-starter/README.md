@@ -36,3 +36,6 @@ with tests, and add a short section to this README about what you built.
 (Under git commit - `saved jobs section and save/remove buttons`)
 -Identified and Fixed minor incosistency with deletion operation on server.js DELETE route using AI AGENT.
 (Under git commit - `delete route fix`)
+-Generated test cases from AI covering Jobs and Saved Jobs rendering, Empty saved jobs list, saving and listing a job, removing a saved job, persistence after server restart.
+All testcases passed.
+(Under git commit - `testcase generation and execution`)
